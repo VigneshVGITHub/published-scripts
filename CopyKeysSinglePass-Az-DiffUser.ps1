@@ -1193,7 +1193,7 @@ function Start-CopyKeys
     $AuthResult = Get-Authentication
     $AccessToken = $AuthResult.AccessToken
     $UserPrincipalName = $Context.Account.Id
-    $UserId = (Get-AzureRmADUser -UserPrincipalName $UserPrincipalName).Id
+    $UserId = (Get-AzADUser -UserPrincipalName $UserPrincipalName).Id
 
     Write-Debug "`nStarting CopyKeys for UserId: $UserId`n"
 
